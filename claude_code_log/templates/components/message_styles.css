@@ -179,7 +179,7 @@
 
 /* Right-aligned messages (user-initiated, right margin 0, left margin 33%) */
 .user:not(.compacted),
-.system {
+.system:not(.system-info):not(.system-warning):not(.system-error) {
     margin-left: 33%;
     margin-right: 0;
 }
@@ -332,6 +332,10 @@
 .system-info {
     border-left-color: var(--info-dimmed);
     background-color: var(--highlight-dimmed);
+}
+
+.system-info .header,
+.system-info .content {
     font-size: 80%;
 }
 
